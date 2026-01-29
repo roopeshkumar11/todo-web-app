@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/api";
-
+import React from "react";
 const BoardList = ({ setSelectedBoard }) => {
   const [boards, setBoards] = useState([]);
   const [name, setName] = useState("");

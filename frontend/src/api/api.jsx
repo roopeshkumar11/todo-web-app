@@ -1,5 +1,6 @@
 import axios from "axios";
 import { auth } from "../firebase";
+import React from "react";
 
 const API = axios.create({
   baseURL: "http://localhost:5000/api",
