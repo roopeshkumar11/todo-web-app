@@ -27,37 +27,38 @@ Built with **React.js, Node.js, MongoDB**, and **Firebase authentication**.
 
 ## 🔹 Folder Structure
 
-todo-web-app/
-├── backend/                  # Backend (Node.js + Express + MongoDB + Firebase)
-│   ├── config/               # Configuration files
-│   │   ├── db.js             # MongoDB connection setup
-│   │   └── firebase.js       # Firebase Admin SDK setup
-│   ├── middleware/           
-│   │   └── authMiddleware.js # Middleware to protect routes with Firebase token
-│   ├── models/               
-│   │   ├── Board.js          # Board schema
-│   │   └── Todo.js           # Todo schema
-│   ├── routes/               
-│   │   ├── boardRoutes.js    # Board API endpoints
-│   │   └── todoRoutes.js     # Todo API endpoints
-│   ├── firebaseServiceKey.json # Firebase service account key (⚠️ keep private)
-│   ├── server.js             # Main backend server entry point
-│   └── .env                  # Environment variables
+todoweb-app/
+├── server/ # Backend (Node.js + Express + MongoDB + Firebase)
+│ ├── config/ # Configuration files
+│ │ ├── db.js # MongoDB connection setup
+│ │ └── firebase.js # Firebase Admin SDK setup
+│ ├── middleware/
+│ │ └── authMiddleware.js # Protect routes using Firebase token
+│ ├── models/
+│ │ ├── Board.js # Board schema
+│ │ └── Todo.js # Todo schema
+│ ├── routes/
+│ │ ├── boardRoutes.js # Board API endpoints
+│ │ └── todoRoutes.js # Todo API endpoints
+│ ├── firebaseServiceKey.json # Firebase service account key (⚠️ keep private)
+│ ├── server.js # Backend server entry point
+│ └── .env # Environment variables (MONGO_URI, PORT)
 │
-├── frontend/                 # Frontend (React.js + Tailwind CSS)
-│   ├── src/
-│   │   ├── App.jsx           # Root component
-│   │   ├── main.jsx          # Entry point
-│   │   ├── pages/            # Page components
-│   │   │   ├── Login.jsx     # Login page
-│   │   │   ├── Register.jsx  # Register page
-│   │   │   └── Dashboard.jsx # Dashboard page (boards + todos)
-│   │   └── auth/
-│   │       └── AuthContext.jsx # Context for authentication state
-│   ├── index.css             # Global styles
-│   └── package.json          # Frontend dependencies
+├── client/ # Frontend (React.js + Tailwind CSS)
+│ ├── src/
+│ │ ├── App.jsx # Root component
+│ │ ├── main.jsx # React entry point
+│ │ ├── pages/ # Page components
+│ │ │ ├── Login.jsx # Login page
+│ │ │ ├── Register.jsx # Registration page
+│ │ │ └── Dashboard.jsx # Dashboard (boards + todos)
+│ │ ├── components/ # Reusable UI components
+│ │ └── auth/
+│ │ └── AuthContext.jsx # Authentication context
+│ ├── index.css # Global styles
+│ └── package.json # Frontend dependencies
 │
-└── README.md                 # Project documentation
+└── README.md # Project documentation
 
 ## 🔹 Setup Instructions
 
@@ -144,7 +145,15 @@ axios.post("http://localhost:5000/api/todos", {
   boardId: "BOARD_ID_HERE"
 }, {
   headers: { Authorization: `Bearer ${token}` }
-}); -->
+});
+ -->
+
+
+
+
+
+
+
 
 # 📝 TodoWeb App (MERN + Firebase Auth)
 
