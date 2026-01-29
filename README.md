@@ -28,36 +28,36 @@ Built with **React.js, Node.js, MongoDB**, and **Firebase authentication**.
 ## 🔹 Folder Structure
 
 todo-web-app/
-├── backend/
-│ ├── config/
-│ │ ├── db.js # MongoDB connection
-│ │ └── firebase.js # Firebase Admin SDK setup
-│ ├── middleware/
-│ │ └── authMiddleware.js # Protect routes with Firebase token
-│ ├── models/
-│ │ ├── Board.js # Board schema
-│ │ └── Todo.js # Todo schema
-│ ├── routes/
-│ │ ├── boardRoutes.js # Board API endpoints
-│ │ └── todoRoutes.js # Todo API endpoints
-│ ├── firebaseServiceKey.json # Firebase service account key
-│ ├── server.js # Main backend server
-│ └── .env # Environment variables
-├── frontend/
-│ ├── src/
-│ │ ├── App.jsx
-│ │ ├── main.jsx
-│ │ ├── pages/
-│ │ │ ├── Login.jsx
-│ │ │ ├── Register.jsx
-│ │ │ └── Dashboard.jsx
-│ │ └── auth/
-│ │ └── AuthContext.jsx
-│ ├── index.css
-│ └── package.json
-└── README.md
-
----
+├── backend/                  # Backend (Node.js + Express + MongoDB + Firebase)
+│   ├── config/               # Configuration files
+│   │   ├── db.js             # MongoDB connection setup
+│   │   └── firebase.js       # Firebase Admin SDK setup
+│   ├── middleware/           
+│   │   └── authMiddleware.js # Middleware to protect routes with Firebase token
+│   ├── models/               
+│   │   ├── Board.js          # Board schema
+│   │   └── Todo.js           # Todo schema
+│   ├── routes/               
+│   │   ├── boardRoutes.js    # Board API endpoints
+│   │   └── todoRoutes.js     # Todo API endpoints
+│   ├── firebaseServiceKey.json # Firebase service account key (⚠️ keep private)
+│   ├── server.js             # Main backend server entry point
+│   └── .env                  # Environment variables
+│
+├── frontend/                 # Frontend (React.js + Tailwind CSS)
+│   ├── src/
+│   │   ├── App.jsx           # Root component
+│   │   ├── main.jsx          # Entry point
+│   │   ├── pages/            # Page components
+│   │   │   ├── Login.jsx     # Login page
+│   │   │   ├── Register.jsx  # Register page
+│   │   │   └── Dashboard.jsx # Dashboard page (boards + todos)
+│   │   └── auth/
+│   │       └── AuthContext.jsx # Context for authentication state
+│   ├── index.css             # Global styles
+│   └── package.json          # Frontend dependencies
+│
+└── README.md                 # Project documentation
 
 ## 🔹 Setup Instructions
 
